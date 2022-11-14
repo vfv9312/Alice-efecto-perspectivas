@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralaxx</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        img{
+  max-width: 100%;
+  height: auto;
+}
+        .parallax-contenedor{
+            width: 100%;
+            height: 100vh;
+            perspective: 8px;
+            perspective-origin: 50%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        .image{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            transform: 0 50%;
+        }
+        .image-background{
+            height: auto;
+            width: 100%;
+            transform: translate(0px)
+            scale(1);
+            transform: 0 50%;
+
+        }
+        .image-middel{
+            height: 100%;
+            width: 100%;
+            transform: translateZ(5px) scale(0.375);
+  transform-origin: 50%;
+
+        }
+        .image-foreground{
+            width: 100%;
+  height: auto;
+  transform: translateZ(2px) scale(0.75);
+  transform-origin: top;
+        }
+        .tarjeta{
+            width: 80px;
+  height: 100px;
+  position: absolute;
+  /* Estilos propios de la carta */
+  background: white;
+  border-radius: 8px;
+  transform: rotate(-20deg);
+        }
+        .uno{
+            left: 30%;
+        }
+        .dos{
+right: 20%;
+top: 200px;
+        }
+        .tres{
+            right: 25%;
+            bottom: -500px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parallax-contenedor">
+        <div class="image image-background">
+            <img src="https://i.ibb.co/jbLKgvX/Background.png" alt="">
+        </div>
+        <div class="image image-middel">
+            <div class="tarjeta uno"> <p>Vladimir</p></div>
+            <div class="tarjeta dos"><p>Farrera</p></div>
+            <div class="tarjeta tres"><p>Vera</p></div>
+        </div>
+        <div class="image image-foreground">
+            <img src="https://i.ibb.co/vJdbRkj/Alice.png" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
